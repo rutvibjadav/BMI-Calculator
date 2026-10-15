@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f8fc">
+  <meta name="description" content="Calculate your Body Mass Index with this free, easy-to-use BMI calculator.">
+  <title>BMI Calculator – Veda Technology Internship Day 6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="BMI Calculator home">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span>Veda <span class="brand-light">Technology</span></span>
+      </a>
+      <span class="project-label">INTERNSHIP · DAY 6</span>
+    </header>
+
+    <section class="calculator-layout" aria-labelledby="page-title">
+      <div class="intro">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR PERSONAL HEALTH CHECK</span>
+        <h1 id="page-title">BMI <span>Calculator</span></h1>
+        <p class="intro-copy">A little insight can go a long way. Enter your height and weight to calculate your Body Mass Index.</p>
+        <div class="info-card">
+          <span class="info-icon" aria-hidden="true">i</span>
+          <p><strong>What is BMI?</strong><br>Body Mass Index (BMI) is a screening measure that compares your weight to your height. It can be a helpful starting point for a health conversation, but it is not a medical diagnosis.</p>
+        </div>
+        <div class="measurement-note">
+          <span class="note-rule" aria-hidden="true"></span>
+          <p>For adults, BMI is one useful number—not the whole picture.</p>
+        </div>
+      </div>
+
+      <section class="calculator-card" aria-label="BMI calculator form">
+        <div class="card-heading">
+          <div>
+            <span class="card-kicker">LET'S GET STARTED</span>
+            <h2>Your measurements</h2>
+          </div>
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M4 19V5m0 14h16M8 15v-3m4 3V8m4 7v-5m4 5V6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+
+        <form id="bmi-form" novalidate>
+          <div class="field-group">
+            <label for="height">Height <span class="unit">(cm)</span></label>
+            <div class="input-wrap">
+              <input id="height" name="height" type="number" inputmode="decimal" step="any" min="50" max="300" placeholder="e.g. 170" aria-describedby="height-error">
+              <span class="input-unit" aria-hidden="true">cm</span>
+            </div>
+            <p class="field-error" id="height-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field-group">
+            <label for="weight">Weight <span class="unit">(kg)</span></label>
+            <div class="input-wrap">
+              <input id="weight" name="weight" type="number" inputmode="decimal" step="any" min="10" max="500" placeholder="e.g. 65" aria-describedby="weight-error">
+              <span class="input-unit" aria-hidden="true">kg</span>
+            </div>
+            <p class="field-error" id="weight-error" aria-live="polite"></p>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+
+          <div class="button-row">
+            <button class="button button-primary" type="submit">
+              Calculate BMI
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button class="button button-secondary" id="reset-button" type="button">Reset</button>
+          </div>
+        </form>
+
+        <section class="result-card" id="result" aria-live="polite" aria-atomic="true" hidden>
+          <div class="result-topline">
+            <span class="result-label">YOUR RESULT</span>
+            <span class="category-badge" id="category-badge"></span>
+          </div>
+          <p class="bmi-value" id="bmi-value"></p>
+          <p class="category-message" id="category-message"></p>
+          <p class="result-disclaimer">BMI is a screening measure, not a medical diagnosis. Consider discussing your results with a health professional.</p>
+        </section>
+      </section>
+    </section>
+
+    <footer class="site-footer">
+      <span>Developed by <strong>Rutvi Jadav</strong> <span class="footer-divider">|</span> Veda Technology Internship</span>
+      <span class="footer-task">DAY 6 PROJECT</span>
+    </footer>
+  </main>
+</body>
+</html>
